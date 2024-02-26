@@ -1,7 +1,7 @@
 ---
-title: "Money in the Utility Function"
+title: "Chap 2: Money in the Utility Function"
 author: "Tedy Herlambang"
-subtitle: "Chap 2 of Monetary Theory and Policy - Carl E. Walsh"
+subtitle: ""
 footer: ub.ac.id
 logo: images/logo-ub-bottom.png
 editor: source
@@ -140,7 +140,7 @@ than simply that the household would prefer having more money to less money.
 - Physical capital produces output according to a standard neoclassical production function.
 - Given its current income, its assets, and any net transfers received from the government ( $\tau_t$), the household allocates its resources among consumption, gross investment in physical capital, and gross accumulation of real money balances and bonds. 
 
-## Constraint (cont'd)
+## Constraint {.scrollable} (cont'd)
 
 - If the rate of depreciation of physical capital is $\delta$, the aggregate economy wide budget  constraint of the household sector takes the form 2.2
 
@@ -151,10 +151,10 @@ Y_t + \tau_t N_t+(1-\delta)K_{t-1}+ \frac {(1+i_{t-1}) B_{t-1}}{P_t}+ \frac {M_{
 \end{multline*}
 $$
 
-where $Y_t$ is aggregate output, $K{t-1}$ is the aggregate stock of capital at the start of period t, and $\tau_t N_t$ is the aggregate real value of any lump-sum transfers or taxes. 
+- where $Y_t$ is aggregate output, $K{t-1}$ is the aggregate stock of capital at the start of period t, and $\tau_t N_t$ is the aggregate real value of any lump-sum transfers or taxes. 
 
 
-## Aggregate production function
+## Aggregate production function {.scrollable}
 
 - The aggregate production function relates output Y1 to the available capital stock $K_{t-1}$ and employment $N_1$: $Y_1 = F(K_{1-t},N_1)$
 - Assuming this production function is linear homogeneous with constant returns to scale, output per capita y1 is a function of the per capita capital stock $k_{t-1}$ 
@@ -182,9 +182,7 @@ $$
 V_{(\omega_t)}= max \{u(c_t,m_t)+\beta V(\omega_{t+1})\},  \tag{2.5}
 $$
 
-![](2.5.png){width=600px}
-
-## Where the maximization
+## The maximization
 
 - where the maximization is subject to the budget constraint (2.4) and
 
@@ -194,21 +192,21 @@ $$
 $$
 
 
-## FOC
+## FOC (1)
 
 - Using (2.4) to express $k_t$ as $\omega_t - c_t - m_t - b_t$ and making use of the definition of $\omega_{t+1}$, (2.5) can be written as 
 
 
 
 $$
-\begin{align*}
-& V_{(\omega_t)}= max \{u(c_t,m_t) \\
-& +\beta V(f \frac {({\omega_t - c_t - m_t - b_t}} {1+n}) + \tau_{t+1} + ({\frac {1 - \delta} {1+n}})({\omega_t - c_t - m_t - b_t) \\
-& + {{(1 + i_{t})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}}}  \} 
-\end{align*}
+\begin{split}
+V_{(\omega_t)}= max \{u(c_t,m_t) \\
++\beta V(f \frac {({\omega_t - c_t - m_t - b_t}} {1+n}) + \tau_{t+1} + ({{\frac {1 - \delta} {1+n}}})({\omega_t - c_t - m_t - b_t) \\
++ {{(1 + i_{t})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}}}  \} 
+\end{split}
 $$
 
-## FOC
+## FOC (2) {.scrollable}
 
 The first order necessary conditions for this problem are
 
@@ -228,25 +226,23 @@ $$
 \lim_{t\to\infty} \beta^t \lambda_t x_t =0, for\ x = k,b,m \tag{2.9}
 $$
 
-where At is the marginal utility of period t consumption.
+- where At is the marginal utility of period t consumption.
 
 ## The envelope theorem
 
 - The envelope theorem implies 2.10
 
-
 $$
-
 V_\omega (\omega_t) = \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] - \frac {1}{1+\pi_{t+1}}] V_{\omega}(\omega_{1+1}), 
-
 $$
-which together with (2.6) yields
+
+- which together with (2.6) yields
 
 $$
 \lambda_t \equiv u_c(c_t, m_t)= V_\omega (\omega_t) \tag{2.10}
 $$
 
-## The FOC have straightforward interpretations.
+## The FOC interpretations.
 
 - Using (2.6) and (2.10), (2.8) can be written as 
 
@@ -254,9 +250,10 @@ $$
 $$
 u_m(c_t,m_t)+ \frac {{\beta u_c} (c_{t+1},m_{t+1})} {{(1+\pi_{t+1})(1+n)}} = u_c(c_t,m_t) \tag{2.11}
 $$
+
 ## Straightforward interpretations (cont'd)
 
-From (2.6), (2.7), and (2.11), 
+- From (2.6), (2.7), and (2.11), 
 
 
 $$
@@ -276,86 +273,215 @@ $$
 - It expresses the gross nominal rate of interest as equal to the gross real return on capital times 1 plus the expected rate of inﬂation.
 
 - If one notes that $(1 + x)(1 + y) \approx  1 + x + y $ when x and y are small, so (2.13) is often written as 
+
 $$
 i_t= r_t+ \pi_{t+1}
 $$
 
+
 ## 2.2.1 Steady-State Equilibrium
 
-![](21415.png){width=600px}
+- Using (2.10) to eliminate $V_\omega (\omega^{ss})$, the equilibrium conditions:
 
-# next
+$$
+u_c(c^{ss},m^{ss}) - \beta[f_k(k^{ss})+1-\delta] u_c(c^{ss},m^{ss})=0, \tag{2.14}
+$$
 
-![](21617.png){width=600px}
+$$
+\frac {{1+i^{ss}}} {{1+\theta}} - [f_k (k^{ss}) + 1 - \delta] = 0, \tag{2.15}
+$$
 
-## Next
-
-2.18
-
-![](218.png){width=600px}
-
-## Next
-
-![](21920.png){width=600px}
-
-## next
-
-![](221.png){width=600px}
+# Steady-State Equilibrium (cont'd)
 
 
-## To understand why superneutrality work
+$$
+u_m(c^{SS},m^{SS} - \beta [f_k(k^{ss}) + 1-\delta] u_c{(c^{ss}, m^{ss})} + \frac {{\beta u_c}(c^{ss},m^{ss})} {{1+\theta}} =0,  \tag{2.16}
+$$ 
 
-![](222.png){width=600px}
+$$
+f(k^{ss}) - \tau^{ss} + (1-\delta)k^{ss} + \frac {{m^{ss}}} {{1+\theta}} = c^{ss}+k^{ss}+m^{ss}, \tag{2.17}
+$$
 
+## The real return on capital
+
+- net of depreciation) is $r_{ss} \equiv f_k(k_{ss} - \delta $, so (2.15) can be written as
+
+$$
+1+i^{ss}=(1+r^{ss})(1+\theta) = (1+r^{ss})(1+\pi^{ss}) \tag{2.18}
+$$
+
+
+## The steady-state capital-labor ratio
+
+$$
+f_k(k^{ss}) = \frac {1}{\beta} - 1 + \delta, \tag{2.19}
+$$
+
+
+
+- if the production function is Cobb-Douglass, $f(k)= k^\alpha$ for $0<\alpha<1$, then $f_k(k) = \alpha k^{\alpha-1}$ and
+
+$$
+k^{ss}=[\frac {{\alpha \beta}} {{1+\beta(\delta-1)}}]^{\frac {1}{1-\alpha}}, \tag{2.20}
+$$
+
+## The economy’s resource constraint
+
+$$
+c^{ss}=f(k^{ss}) - \delta k^{ss}, \tag{2.21}
+$$
+
+
+## Superneutrality 
+
+- To understand why superneutrality holds, note from (2.10), $u_c=V_{\omega}(\omega_t)$, so using (2.6), 
+
+
+$$
+u_c(c_t, m_t)= \beta[f_k(k_t) + 1-\delta] u_c({c_{t+1}}, m_{t+1}}),  or
+$$
+
+$$
+\frac {{u_c} (c_{t+1}, m_{t+1})} {{u_c} (c_t,m_t)} = \frac {{1/\beta}} {{f_k}(k_t) +1-\delta}. \tag{2.22}
+$$
 
 
 ## Existence of Steady State
 
-![](223.png){width=600px}
+$$
+B(m_{t+1}) \equiv \frac {\beta}{1+\theta}v_c (c^{ss})m_{t+1}= [v_C(c^{ss})-\phi_m(m_t)]m_t \equiv A(m_t), \tag{2.23}
+$$
 
-## next
+## Steady-state real balances
 
 ![](fig21.png){width=600px}
-## Steady States with a Time-Varying Money Stock 
 
-![](22425.png){width=600px}
+## SS with a Time-Varying Money Stock {.scrollable}
 
-## next
+$$
+u_c(c^*, m_t)=\beta [f_k(k^*)+1-\delta]u_c(c^*,m_{t+1}), \tag{2.24}
+$$
+$$
+\frac {1+i_t}{{(1+\pi_{t+1})}} = [f_k(k^*)+1+\delta], \tag{2.25}
+$$
 
-![](22627.png){width=600px}
+- and (2.12) implies
 
-## Next
+$$
+\frac {{u_m}(c^*,m_t)} {{u_c}(c^*,m_t)} = \frac {i_t} {1+i_t}, \tag{2.26}
+$$
 
-![](228.png){width=600px}
+- and the economy's resource constraint becomes $c^* = f(k^*) - \delta k^*$.
 
-## next
+- The evolution of the real stock of money is given by
 
-![](229.png){width=600px}
+$$
+m_t={ (\frac {1+\theta_t}{1+\pi_t}) }m_{t-1}. \tag{2.27}
+$$
 
-## next
 
-![](230.png){width=600px}
+## For (2.24) to hold requires 
 
+- the marginal utility of consumption to rise over time such that
+
+$$
+\frac {{u_c}(c^*, m_{t+1})} {{u_c}(c^*,m_t)} = \frac {1}{\beta [f_k(k^*)+1-\delta]} > 1. \tag{2.28}
+$$
+
+
+## Following Fisher
+
+- If, following Fischer (1979), the utility function takes the form
+
+$$
+u_c(c,m) = \frac {(c^{1-\gamma} m^{\gamma})^{1-\eta} } {1-\eta}, \tag{2.29}
+$$
+
+
+## The evolve of real money balances
+
+
+
+$$
+\frac {{m_t}} {{m_{t+1}}} =\{ \frac {{1}} {{\beta[f_k(k^*) + 1-\delta]}}  \} ^\frac {1} {\gamma(1-n)}{}, \tag{2.30}
+$$
+
+## The key equilibrium condition in the MIU model
+
+- (2.12) can be written as
+
+$$
+u_m (\frac {M_0}{P_t}) = [1 - \beta \frac {{P_t}} {{P_{t+1}}}]u_c(c), \tag{2.31}
+$$
+
+## Equilibrium inflationary path with a fixed nominal money supply
+
+![](fig22.png)
+
+## 2.2.3 The Interest Elasticity of Money Demand 
+
+$$
+u(c_t,m_t) =[{{ac_t}^{1-b} } +{(1-a)m_t}^{1-b}]^\frac {1}{1-b}, \tag{2.32}
+$$
+
+- and (2.12) can be written as 
+
+$$
+m_t= {(\frac {1-a}{a})}^\frac{1}{b} {(\frac {i}{1+i})}^\frac  {{-1}} {{b}} c_t, \tag{2.33}
+$$
+
+## To model empirical money demand (log specification)
+
+$$
+log \frac {M_t}{P_t} = \frac {1}{b} log (\frac {1-a}{a}) + log\ c - \frac {1}{b} log \frac {i}{1+i}, \tag{2.34}
+$$
+
+## Empirical Evidence on the Interest Elasticity of Money Demand 
+
+## 2.2.4 Limitations 
 
 
 ## 2.3 The Welfare Cost of Inflation 
 
+![](fig23.png)
 
 
 
+## Lucas (2000)
 
-FIgure 2.3 Welfare costs of inflation as measured by area under money demand curve.
+- Lucas (2000) provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function: 
 
-## Lucas
+$$
+u(c,m)= \frac {1}{1-\sigma} \{ [c\vartheta \frac {m}{c} ]^{1-\sigma } -1 \} \tag{2.35}
+$$
 
-Lucas (2000) provided estimates of the welfare costs of inflation, starting with the fol­
-lowing specification of the instantaneous utility function: 
-2.35
-2.36
-2.37
-2.38
-2.39
-2.40
+- With this utility function, (2.12) becomes
+
+$$
+\frac {{u_m}} {{u_c}} = \frac {{\vartheta'}(x)} {{\vartheta(x)}- x\vartheta'(x)} = \frac{i}{1+i} = \Upsilon,  \tag{2.36}
+$$
+
+## If this cost is denoted 
+
+- $w \Upsilon$, it is defined by
+
+$$
+u(1+w(\Upsilon), m(\Upsilon)) \equiv (1,m^*), \tag{2.37}
+$$
+- where $m(\Upsilon)$ denotes the solution of (2.36) for real money balances evaluated at steadystate consumption c = 1
+
+$$
+w\Upsilon = \sqrt {\beta \Upsilon}. \tag{2.38}
+$$
+
+## The welfare costs for two alternative specifications of money demand
+
+$$
+ln(m) = ln(A) - \eta\ ln (i); \tag{2.39}
+$$
+$$
+ln(m)= ln(B) - \xi i. \tag{2.40}
+$$
 
 
 

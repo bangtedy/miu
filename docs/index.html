@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Tedy Herlambang">
-  <title>Money in the Utility Function</title>
+  <title>Chap 2: Money in the Utility Function</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -327,8 +327,7 @@
     <div class="slides">
 
 <section data-background-opacity="0.5" data-background-position="2% 2%" data-background-size="15%" class="quarto-title-block center">
-  <h1 class="title">Money in the Utility Function</h1>
-  <p class="subtitle">Chap 2 of Monetary Theory and Policy - Carl E. Walsh</p>
+  <h1 class="title">Chap 2: Money in the Utility Function</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -402,7 +401,7 @@ W = \sum_{t = 1}^{\infty} \beta^t U_t = \sum_{t = 1}^{\infty} \beta^t u(c_t,m_t)
 </ul>
 </section>
 <section class="slide level2">
-<h2>Constraint (cont’d)</h2>
+<h2>Constraint {.scrollable} (cont’d)</h2>
 <ul>
 <li>If the rate of depreciation of physical capital is <span class="math inline">\(\delta\)</span>, the aggregate economy wide budget constraint of the household sector takes the form 2.2</li>
 </ul>
@@ -412,9 +411,11 @@ Y_t + \tau_t N_t+(1-\delta)K_{t-1}+ \frac {(1+i_{t-1}) B_{t-1}}{P_t}+ \frac {M_{
 = C_t+K_t+ \frac {M_t}{P_t} + \frac {B_t}{P_t} \tag{2.2}
 \end{multline*}
 \]</span></p>
-<p>where <span class="math inline">\(Y_t\)</span> is aggregate output, <span class="math inline">\(K{t-1}\)</span> is the aggregate stock of capital at the start of period t, and <span class="math inline">\(\tau_t N_t\)</span> is the aggregate real value of any lump-sum transfers or taxes.</p>
+<ul>
+<li>where <span class="math inline">\(Y_t\)</span> is aggregate output, <span class="math inline">\(K{t-1}\)</span> is the aggregate stock of capital at the start of period t, and <span class="math inline">\(\tau_t N_t\)</span> is the aggregate real value of any lump-sum transfers or taxes.</li>
+</ul>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 <h2>Aggregate production function</h2>
 <ul>
 <li>The aggregate production function relates output Y1 to the available capital stock <span class="math inline">\(K_{t-1}\)</span> and employment <span class="math inline">\(N_1\)</span>: <span class="math inline">\(Y_1 = F(K_{1-t},N_1)\)</span></li>
@@ -445,10 +446,9 @@ y_t=f ({\frac {k_{t-1}} {1+n}}), \tag{2.3}
 <p><span class="math display">\[
 V_{(\omega_t)}= max \{u(c_t,m_t)+\beta V(\omega_{t+1})\},  \tag{2.5}
 \]</span></p>
-
-<img data-src="2.5.png" width="600" class="r-stretch"></section>
+</section>
 <section class="slide level2">
-<h2>Where the maximization</h2>
+<h2>The maximization</h2>
 <ul>
 <li>where the maximization is subject to the budget constraint (2.4) and</li>
 </ul>
@@ -457,20 +457,20 @@ V_{(\omega_t)}= max \{u(c_t,m_t)+\beta V(\omega_{t+1})\},  \tag{2.5}
 \]</span></p>
 </section>
 <section class="slide level2">
-<h2>FOC</h2>
+<h2>FOC (1)</h2>
 <ul>
 <li>Using (2.4) to express <span class="math inline">\(k_t\)</span> as <span class="math inline">\(\omega_t - c_t - m_t - b_t\)</span> and making use of the definition of <span class="math inline">\(\omega_{t+1}\)</span>, (2.5) can be written as</li>
 </ul>
 <p><span class="math display">\[
-\begin{align*}
-&amp; V_{(\omega_t)}= max \{u(c_t,m_t) \\
-&amp; +\beta V(f \frac {({\omega_t - c_t - m_t - b_t}} {1+n}) + \tau_{t+1} + ({\frac {1 - \delta} {1+n}})({\omega_t - c_t - m_t - b_t) \\
-&amp; + {{(1 + i_{t})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}}}  \}
-\end{align*}
+\begin{split}
+V_{(\omega_t)}= max \{u(c_t,m_t) \\
++\beta V(f \frac {({\omega_t - c_t - m_t - b_t}} {1+n}) + \tau_{t+1} + ({{\frac {1 - \delta} {1+n}}})({\omega_t - c_t - m_t - b_t) \\
++ {{(1 + i_{t})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}}}  \}
+\end{split}
 \]</span></p>
 </section>
-<section class="slide level2">
-<h2>FOC</h2>
+<section class="slide level2 scrollable">
+<h2>FOC (2)</h2>
 <p>The first order necessary conditions for this problem are</p>
 <p><span class="math display">\[
 u_c(c_t,m_t)- \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] V_{\omega}(\omega_{1+1})=0 \tag{2.6}
@@ -483,29 +483,39 @@ u_c(c_t,m_t)- \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta - \frac {1}{1+
 <p><span class="math display">\[
 \lim_{t\to\infty} \beta^t \lambda_t x_t =0, for\ x = k,b,m \tag{2.9}
 \]</span></p>
-<p>where At is the marginal utility of period t consumption.</p>
+<ul>
+<li>where At is the marginal utility of period t consumption.</li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>The envelope theorem</h2>
 <ul>
 <li>The envelope theorem implies 2.10</li>
 </ul>
-<p>$$</p>
-<p>V_(<em>t) = [f_k() + 1-] - ] V</em>{}(_{1+1}),</p>
-<p>$$ which together with (2.6) yields</p>
+<p><span class="math display">\[
+V_\omega (\omega_t) = \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] - \frac {1}{1+\pi_{t+1}}] V_{\omega}(\omega_{1+1}),
+\]</span></p>
+<ul>
+<li>which together with (2.6) yields</li>
+</ul>
 <p><span class="math display">\[
 \lambda_t \equiv u_c(c_t, m_t)= V_\omega (\omega_t) \tag{2.10}
 \]</span></p>
 </section>
 <section class="slide level2">
-<h2>The FOC have straightforward interpretations.</h2>
+<h2>The FOC interpretations.</h2>
 <ul>
 <li>Using (2.6) and (2.10), (2.8) can be written as</li>
 </ul>
 <p><span class="math display">\[
 u_m(c_t,m_t)+ \frac {{\beta u_c} (c_{t+1},m_{t+1})} {{(1+\pi_{t+1})(1+n)}} = u_c(c_t,m_t) \tag{2.11}
-\]</span> ## Straightforward interpretations (cont’d)</p>
-<p>From (2.6), (2.7), and (2.11),</p>
+\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Straightforward interpretations (cont’d)</h2>
+<ul>
+<li>From (2.6), (2.7), and (2.11),</li>
+</ul>
 <p><span class="math display">\[
 \begin{align*}
 \frac {{u_m} (c_t.m_t)} {{u_c}(c_t.m_t)} &amp; = 1- [ \frac {\beta}{{(1+r_t)(1+\pi_{t+1})} }] \frac {{u_c}(c_{t+1}, m_{t+1})} {{{u_c}(c_{t}, m_{t})}} \\
@@ -521,69 +531,203 @@ u_m(c_t,m_t)+ \frac {{\beta u_c} (c_{t+1},m_{t+1})} {{(1+\pi_{t+1})(1+n)}} = u_c
 \]</span></p>
 <ul>
 <li><p>It expresses the gross nominal rate of interest as equal to the gross real return on capital times 1 plus the expected rate of inﬂation.</p></li>
-<li><p>If one notes that $(1 + x)(1 + y) + x + y $ when x and y are small, so (2.13) is often written as <span class="math display">\[
-i_t= r_t+ \pi_{t+1}
-\]</span></p></li>
+<li><p>If one notes that $(1 + x)(1 + y) + x + y $ when x and y are small, so (2.13) is often written as</p></li>
 </ul>
+<p><span class="math display">\[
+i_t= r_t+ \pi_{t+1}
+\]</span></p>
 </section>
 <section class="slide level2">
 <h2>2.2.1 Steady-State Equilibrium</h2>
-
-<img data-src="21415.png" width="600" class="r-stretch"></section>
+<ul>
+<li>Using (2.10) to eliminate <span class="math inline">\(V_\omega (\omega^{ss})\)</span>, the equilibrium conditions:</li>
+</ul>
+<p><span class="math display">\[
+u_c(c^{ss},m^{ss}) - \beta[f_k(k^{ss})+1-\delta] u_c(c^{ss},m^{ss})=0, \tag{2.14}
+\]</span></p>
+<p><span class="math display">\[
+\frac {{1+i^{ss}}} {{1+\theta}} - [f_k (k^{ss}) + 1 - \delta] = 0, \tag{2.15}
+\]</span></p>
+</section>
 <section>
 <section class="title-slide slide level1 center">
-<h1>next</h1>
-
-<img data-src="21617.png" width="600" class="r-stretch"></section>
+<h1>Steady-State Equilibrium (cont’d)</h1>
+<p><span class="math display">\[
+u_m(c^{SS},m^{SS} - \beta [f_k(k^{ss}) + 1-\delta] u_c{(c^{ss}, m^{ss})} + \frac {{\beta u_c}(c^{ss},m^{ss})} {{1+\theta}} =0,  \tag{2.16}
+\]</span></p>
+<p><span class="math display">\[
+f(k^{ss}) - \tau^{ss} + (1-\delta)k^{ss} + \frac {{m^{ss}}} {{1+\theta}} = c^{ss}+k^{ss}+m^{ss}, \tag{2.17}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>Next</h2>
-<p>2.18</p>
-
-<img data-src="218.png" width="600" class="r-stretch"></section>
+<h2>The real return on capital</h2>
+<ul>
+<li>net of depreciation) is $r_{ss} f_k(k_{ss} - $, so (2.15) can be written as</li>
+</ul>
+<p><span class="math display">\[
+1+i^{ss}=(1+r^{ss})(1+\theta) = (1+r^{ss})(1+\pi^{ss}) \tag{2.18}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>Next</h2>
-
-<img data-src="21920.png" width="600" class="r-stretch"></section>
+<h2>The steady-state capital-labor ratio</h2>
+<p><span class="math display">\[
+f_k(k^{ss}) = \frac {1}{\beta} - 1 + \delta, \tag{2.19}
+\]</span></p>
+<ul>
+<li>if the production function is Cobb-Douglass, <span class="math inline">\(f(k)= k^\alpha\)</span> for <span class="math inline">\(0&lt;\alpha&lt;1\)</span>, then <span class="math inline">\(f_k(k) = \alpha k^{\alpha-1}\)</span> and</li>
+</ul>
+<p><span class="math display">\[
+k^{ss}=[\frac {{\alpha \beta}} {{1+\beta(\delta-1)}}]^{\frac {1}{1-\alpha}}, \tag{2.20}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>next</h2>
-
-<img data-src="221.png" width="600" class="r-stretch"></section>
+<h2>The economy’s resource constraint</h2>
+<p><span class="math display">\[
+c^{ss}=f(k^{ss}) - \delta k^{ss}, \tag{2.21}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>To understand why superneutrality work</h2>
-
-<img data-src="222.png" width="600" class="r-stretch"></section>
+<h2>Superneutrality</h2>
+<ul>
+<li>To understand why superneutrality holds, note from (2.10), <span class="math inline">\(u_c=V_{\omega}(\omega_t)\)</span>, so using (2.6),</li>
+</ul>
+<p><span class="math display">\[
+u_c(c_t, m_t)= \beta[f_k(k_t) + 1-\delta] u_c({c_{t+1}}, m_{t+1}}),  or
+\]</span></p>
+<p><span class="math display">\[
+\frac {{u_c} (c_{t+1}, m_{t+1})} {{u_c} (c_t,m_t)} = \frac {{1/\beta}} {{f_k}(k_t) +1-\delta}. \tag{2.22}
+\]</span></p>
+</section>
 <section class="slide level2">
 <h2>Existence of Steady State</h2>
-
-<img data-src="223.png" width="600" class="r-stretch"></section>
-<section class="slide level2">
-<h2>next</h2>
-<p><img data-src="fig21.png" width="600"> ## Steady States with a Time-Varying Money Stock</p>
-<p><img data-src="22425.png" width="600"></p>
+<p><span class="math display">\[
+B(m_{t+1}) \equiv \frac {\beta}{1+\theta}v_c (c^{ss})m_{t+1}= [v_C(c^{ss})-\phi_m(m_t)]m_t \equiv A(m_t), \tag{2.23}
+\]</span></p>
 </section>
 <section class="slide level2">
-<h2>next</h2>
+<h2>Steady-state real balances</h2>
 
-<img data-src="22627.png" width="600" class="r-stretch"></section>
+<img data-src="fig21.png" width="600" class="r-stretch"></section>
+<section class="slide level2 scrollable">
+<h2>SS with a Time-Varying Money Stock</h2>
+<p><span class="math display">\[
+u_c(c^*, m_t)=\beta [f_k(k^*)+1-\delta]u_c(c^*,m_{t+1}), \tag{2.24}
+\]</span> <span class="math display">\[
+\frac {1+i_t}{{(1+\pi_{t+1})}} = [f_k(k^*)+1+\delta], \tag{2.25}
+\]</span></p>
+<ul>
+<li>and (2.12) implies</li>
+</ul>
+<p><span class="math display">\[
+\frac {{u_m}(c^*,m_t)} {{u_c}(c^*,m_t)} = \frac {i_t} {1+i_t}, \tag{2.26}
+\]</span></p>
+<ul>
+<li><p>and the economy’s resource constraint becomes <span class="math inline">\(c^* = f(k^*) - \delta k^*\)</span>.</p></li>
+<li><p>The evolution of the real stock of money is given by</p></li>
+</ul>
+<p><span class="math display">\[
+m_t={ (\frac {1+\theta_t}{1+\pi_t}) }m_{t-1}. \tag{2.27}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>Next</h2>
-
-<img data-src="228.png" width="600" class="r-stretch"></section>
+<h2>For (2.24) to hold requires</h2>
+<ul>
+<li>the marginal utility of consumption to rise over time such that</li>
+</ul>
+<p><span class="math display">\[
+\frac {{u_c}(c^*, m_{t+1})} {{u_c}(c^*,m_t)} = \frac {1}{\beta [f_k(k^*)+1-\delta]} &gt; 1. \tag{2.28}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>next</h2>
-
-<img data-src="229.png" width="600" class="r-stretch"></section>
+<h2>Following Fisher</h2>
+<ul>
+<li>If, following Fischer (1979), the utility function takes the form</li>
+</ul>
+<p><span class="math display">\[
+u_c(c,m) = \frac {(c^{1-\gamma} m^{\gamma})^{1-\eta} } {1-\eta}, \tag{2.29}
+\]</span></p>
+</section>
 <section class="slide level2">
-<h2>next</h2>
+<h2>The evolve of real money balances</h2>
+<p><span class="math display">\[
+\frac {{m_t}} {{m_{t+1}}} =\{ \frac {{1}} {{\beta[f_k(k^*) + 1-\delta]}}  \} ^\frac {1} {\gamma(1-n)}{}, \tag{2.30}
+\]</span></p>
+</section>
+<section class="slide level2">
+<h2>The key equilibrium condition in the MIU model</h2>
+<ul>
+<li>(2.12) can be written as</li>
+</ul>
+<p><span class="math display">\[
+u_m (\frac {M_0}{P_t}) = [1 - \beta \frac {{P_t}} {{P_{t+1}}}]u_c(c), \tag{2.31}
+\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Equilibrium inflationary path with a fixed nominal money supply</h2>
 
-<img data-src="230.png" width="600" class="r-stretch"></section>
+<img data-src="fig22.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>2.2.3 The Interest Elasticity of Money Demand</h2>
+<p><span class="math display">\[
+u(c_t,m_t) =[{{ac_t}^{1-b} } +{(1-a)m_t}^{1-b}]^\frac {1}{1-b}, \tag{2.32}
+\]</span></p>
+<ul>
+<li>and (2.12) can be written as</li>
+</ul>
+<p><span class="math display">\[
+m_t= {(\frac {1-a}{a})}^\frac{1}{b} {(\frac {i}{1+i})}^\frac  {{-1}} {{b}} c_t, \tag{2.33}
+\]</span></p>
+</section>
+<section class="slide level2">
+<h2>To model empirical money demand (log specification)</h2>
+<p><span class="math display">\[
+log \frac {M_t}{P_t} = \frac {1}{b} log (\frac {1-a}{a}) + log\ c - \frac {1}{b} log \frac {i}{1+i}, \tag{2.34}
+\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Empirical Evidence on the Interest Elasticity of Money Demand</h2>
+</section>
+<section class="slide level2">
+<h2>2.2.4 Limitations</h2>
+</section>
 <section class="slide level2">
 <h2>2.3 The Welfare Cost of Inflation</h2>
-<p>FIgure 2.3 Welfare costs of inflation as measured by area under money demand curve.</p>
+
+<img data-src="fig23.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Lucas (2000)</h2>
+<ul>
+<li>Lucas (2000) provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function:</li>
+</ul>
+<p><span class="math display">\[
+u(c,m)= \frac {1}{1-\sigma} \{ [c\vartheta \frac {m}{c} ]^{1-\sigma } -1 \} \tag{2.35}
+\]</span></p>
+<ul>
+<li>With this utility function, (2.12) becomes</li>
+</ul>
+<p><span class="math display">\[
+\frac {{u_m}} {{u_c}} = \frac {{\vartheta'}(x)} {{\vartheta(x)}- x\vartheta'(x)} = \frac{i}{1+i} = \Upsilon,  \tag{2.36}
+\]</span></p>
 </section>
 <section class="slide level2">
-<h2>Lucas</h2>
-<p>Lucas (2000) provided estimates of the welfare costs of inflation, starting with the fol­ lowing specification of the instantaneous utility function: 2.35 2.36 2.37 2.38 2.39 2.40</p>
+<h2>If this cost is denoted</h2>
+<ul>
+<li><span class="math inline">\(w \Upsilon\)</span>, it is defined by</li>
+</ul>
+<p><span class="math display">\[
+u(1+w(\Upsilon), m(\Upsilon)) \equiv (1,m^*), \tag{2.37}
+\]</span> - where <span class="math inline">\(m(\Upsilon)\)</span> denotes the solution of (2.36) for real money balances evaluated at steadystate consumption c = 1</p>
+<p><span class="math display">\[
+w\Upsilon = \sqrt {\beta \Upsilon}. \tag{2.38}
+\]</span></p>
+</section>
+<section class="slide level2">
+<h2>The welfare costs for two alternative specifications of money demand</h2>
+<p><span class="math display">\[
+ln(m) = ln(A) - \eta\ ln (i); \tag{2.39}
+\]</span> <span class="math display">\[
+ln(m)= ln(B) - \xi i. \tag{2.40}
+\]</span></p>
 <!-- 
 # {background-iframe="grid-worms/index.html"} 
 Background for title slide, not working in this version of Quarto -->
