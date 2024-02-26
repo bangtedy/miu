@@ -29,7 +29,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -341,10 +360,10 @@ Tedy Herlambang
 <section class="slide level2">
 <h2>2.1 Introduction</h2>
 <ul>
-<li>The neoclassical growth model by Ramsey (1928) and Solow (1956) provides the basic framework for modern macroeconomics.</li>
+<li>The neoclassical growth model by <span class="citation" data-cites="ramseyMathematicalTheorySaving1928">Ramsey (<a href="#/references" role="doc-biblioref" onclick="">1928</a>)</span> and <span class="citation" data-cites="solowContributionTheoryEconomic1956">Solow (<a href="#/references" role="doc-biblioref" onclick="">1956</a>)</span> provides the basic framework for modern macroeconomics.</li>
 <li>But these are models of nonmonetary economies.</li>
 <li>In order to explain monetary policy we have to introduce a monetary policy instrument.</li>
-<li>Sidrauski (1967) introduced money into the neoclassical growth model. At this time money was considered the monetary policy instrument.</li>
+<li><span class="citation" data-cites="sidrauskiRationalChoicePatterns1967">Sidrauski (<a href="#/references" role="doc-biblioref" onclick="">1967</a>)</span> introduced money into the neoclassical growth model. At this time money was considered the monetary policy instrument.</li>
 </ul>
 </section>
 <section class="slide level2 scrollable">
@@ -641,7 +660,7 @@ m_t={ (\frac {1+\theta_t}{1+\pi_t}) }m_{t-1}. \tag{2.27}
 <section class="slide level2">
 <h2>Following Fisher</h2>
 <ul>
-<li>If, following Fischer (1979), the utility function takes the form</li>
+<li>If, following <span class="citation" data-cites="fischerCapitalAccumulationTransition1979">Fischer (<a href="#/references" role="doc-biblioref" onclick="">1979</a>)</span>, the utility function takes the form</li>
 </ul>
 <p><span class="math display">\[
 u_c(c,m) = \frac {(c^{1-\gamma} m^{\gamma})^{1-\eta} } {1-\eta}, \tag{2.29}
@@ -697,7 +716,7 @@ log \frac {M_t}{P_t} = \frac {1}{b} log (\frac {1-a}{a}) + log\ c - \frac {1}{b}
 <section class="slide level2">
 <h2>Lucas (2000)</h2>
 <ul>
-<li>Lucas (2000) provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function:</li>
+<li><span class="citation" data-cites="lucasInflationWelfare2000">Lucas (<a href="#/references" role="doc-biblioref" onclick="">2000</a>)</span> provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function:</li>
 </ul>
 <p><span class="math display">\[
 u(c,m)= \frac {1}{1-\sigma} \{ [c\vartheta \frac {m}{c} ]^{1-\sigma } -1 \} \tag{2.35}
@@ -728,12 +747,32 @@ ln(m) = ln(A) - \eta\ ln (i); \tag{2.39}
 \]</span> <span class="math display">\[
 ln(m)= ln(B) - \xi i. \tag{2.40}
 \]</span></p>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+<h2>References</h2>
 <!-- 
 # {background-iframe="grid-worms/index.html"} 
 Background for title slide, not working in this version of Quarto -->
 
 <img src="images/logo-ub-bottom.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>ub.ac.id</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-fischerCapitalAccumulationTransition1979" class="csl-entry" role="listitem">
+Fischer, Stanley. 1979. <span>“Capital <span>Accumulation</span> on the <span>Transition Path</span> in a <span>Monetary Optimizing Model</span>.”</span> <em>Econometrica</em> 47 (6): 1433–39.
+</div>
+<div id="ref-lucasInflationWelfare2000" class="csl-entry" role="listitem">
+Lucas, Robert E. 2000. <span>“Inflation and <span>Welfare</span>.”</span> <em>Econometrica</em> 68 (2): 247–74. <a href="https://www.jstor.org/stable/2999427">https://www.jstor.org/stable/2999427</a>.
+</div>
+<div id="ref-ramseyMathematicalTheorySaving1928" class="csl-entry" role="listitem">
+Ramsey, F. P. 1928. <span>“A <span>Mathematical Theory</span> of <span>Saving</span>.”</span> <em>The Economic Journal</em> 38 (152): 543–59. <a href="https://doi.org/10.2307/2224098">https://doi.org/10.2307/2224098</a>.
+</div>
+<div id="ref-sidrauskiRationalChoicePatterns1967" class="csl-entry" role="listitem">
+Sidrauski, Miguel. 1967. <span>“Rational <span>Choice</span> and <span>Patterns</span> of <span>Growth</span> in a <span>Monetary Economy</span>.”</span> <em>The American Economic Review</em> 57 (2): 534–44. <a href="https://www.jstor.org/stable/1821653">https://www.jstor.org/stable/1821653</a>.
+</div>
+<div id="ref-solowContributionTheoryEconomic1956" class="csl-entry" role="listitem">
+Solow, Robert M. 1956. <span>“A <span>Contribution</span> to the <span>Theory</span> of <span>Economic Growth</span>.”</span> <em>The Quarterly Journal of Economics</em> 70 (1): 65–94. <a href="https://doi.org/10.2307/1884513">https://doi.org/10.2307/1884513</a>.
+</div>
 </div>
 </section></section>
     </div>

@@ -5,6 +5,7 @@ subtitle: ""
 footer: ub.ac.id
 logo: images/logo-ub-bottom.png
 editor: source
+bibliography: miu.bib
 execute:
   eval: true
   echo: true
@@ -91,10 +92,10 @@ theme_set(papaja::theme_apa())
 ```
 ## 2.1 Introduction 
 
-- The neoclassical growth model by Ramsey (1928) and Solow (1956) provides the basic framework for modern macroeconomics.
+- The neoclassical growth model by @ramseyMathematicalTheorySaving1928 and @solowContributionTheoryEconomic1956 provides the basic framework for modern macroeconomics.
 - But these are models of nonmonetary economies.
 - In order to explain monetary policy we have to introduce a monetary policy instrument.
-- Sidrauski (1967) introduced money into the neoclassical growth model. At this time money was considered the monetary policy instrument.
+- @sidrauskiRationalChoicePatterns1967 introduced money into the neoclassical growth model. At this time money was considered the monetary policy instrument.
 
 ## Intro (cont'd) {.scrollable}
 
@@ -391,7 +392,7 @@ $$
 
 ## Following Fisher
 
-- If, following Fischer (1979), the utility function takes the form
+- If, following @fischerCapitalAccumulationTransition1979, the utility function takes the form
 
 $$
 u_c(c,m) = \frac {(c^{1-\gamma} m^{\gamma})^{1-\eta} } {1-\eta}, \tag{2.29}
@@ -449,7 +450,7 @@ $$
 
 ## Lucas (2000)
 
-- Lucas (2000) provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function: 
+- @lucasInflationWelfare2000 provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function: 
 
 $$
 u(c,m)= \frac {1}{1-\sigma} \{ [c\vartheta \frac {m}{c} ]^{1-\sigma } -1 \} \tag{2.35}
@@ -483,6 +484,7 @@ $$
 ln(m)= ln(B) - \xi i. \tag{2.40}
 $$
 
+## References
 
 
 ```{=html}
