@@ -1,0 +1,366 @@
+---
+title: "Money in the Utility Function"
+author: "Tedy Herlambang"
+subtitle: "Chap 2 of Monetary Theory and Policy - Carl E. Walsh"
+footer: ub.ac.id
+logo: images/logo-ub-bottom.png
+editor: source
+execute:
+  eval: true
+  echo: true
+  warning: true
+  error: true   
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    code-copy: hover
+    code-overflow: scroll
+    multiplex: false
+    embed-resources: false
+    controls: auto
+    progress: true
+    history: true
+    hash-type: number    
+    slide-number: c/t
+    show-slide-number: print  
+    menu:
+      side: right
+      width: normal
+      numbers: true
+    chalkboard:
+      theme: chalkboard
+      # src: drawings.json
+      read-only: false
+title-slide-attributes:
+  # data-background-image: images/logo-ub1.png
+  data-background-opacity: "0.5"
+  data-background-size: 15%
+  data-background-position: 2% 2%
+  # data-background-image: grid-worms/bird.webp
+  # background-iframe: grid-worms/index.html
+preload-iframes: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# General R options
+set.seed(111)               # in case we use randomized procedures       
+options(scipen = 999)       # positive values bias towards fixed and negative towards scientific notation
+options(repos = 
+  c(getOption("repos")["CRAN"],
+  CRANextra = "https://mirror.clientvps.com/CRAN/")
+) # use CRAN as default, set CRANextra to Nürnberg mirror
+
+# Load packages
+if (!require("pacman")) install.packages("pacman", dependencies = TRUE)
+packages <- c(
+  "papaja",
+  "here", "fs",
+  "conflicted",
+  "rio",
+  "tidyverse", 
+  "psych",          
+  "rstatix", "ggstatsplot",
+  "ggplot2", "ggpubr", "scales",
+  "report",
+  # , ...
+  "plotly", "crosstalk", "DT",
+  # for examples:
+  "htmltools",
+  "palmerpenguins",
+  "d3scatter"
+)
+pacman::p_load(char = packages)
+
+# Set here to Rnotebook directory
+here::set_here()
+unloadNamespace("here")                   # need new R session or unload namespace for .here file to take precedence over .Rproj
+notebook_name <- fs::path_file(here::here())
+
+# Solve conflicts in favor of tidyverse
+conflicted::conflict_prefer("filter", winner = "dplyr")
+conflicted::conflict_prefer("select", winner = "dplyr")
+conflicted::conflict_prefer("slice", winner = "dplyr")
+conflicted::conflict_prefer("rename", winner = "dplyr")
+conflicted::conflict_prefer("count", winner = "dplyr")
+
+# Themes for ggplot2 plotting (here used APA style)
+theme_set(papaja::theme_apa())
+```
+## 2.1 Introduction 
+
+- The neoclassical growth model by Ramsey (1928) and Solow (1956) provides the basic framework for modern macroeconomics.
+- But these are models of nonmonetary economies.
+- In order to explain monetary policy we have to introduce a monetary policy instrument.
+- Sidrauski (1967) introduced money into the neoclassical growth model. At this time money was considered the monetary policy instrument.
+
+## Intro (cont'd) {.scrollable}
+
+- How can we introduce money?
+  + Assume money yields utility (MIU) by incorporating into the basic neoclassical model agents whose utility depends directly on their consumption of goods and their holdings of money.
+- The model allows us studying:
+  + impact of money (i.e. monetary policy) on the real economy,
+  + impact of money on prices,
+  + optimal rate of inflation.
+
+## 2.2 The Basic MIU Model 
+
+- Suppose the utility function of the representative household is:
+
+$$
+U=u(c_t,z_t),
+$$
+
+- where $z_t$ is the flow of services yielded by money holdings and $c_t$ is time t per capita consumption. 
+
+## What constitutes $z_t$?
+
+- z should be related to something like the number of dollars, M, times their price, $1/P$, in terms of goods: $M (1/P) = M/P$. 
+- If the service flow is proportional to the real value of the stock of money and $N_t$ is the population, then z can be set equal to real per capita money holdings: 
+$$
+z_t= \frac {M_t} {{P_t}{N_t}} \equiv m_t
+$$
+
+## The Basic MIU Model (cont'd)
+
+The representative household seeks to maximize lifetime utility:
+$$
+W = \sum_{t = 1}^{\infty} \beta^t U_t = \sum_{t = 1}^{\infty} \beta^t u(c_t,m_t) \tag{2.1}
+$$
+where 0 < $\beta$ < 1 is a subjective rate of discount
+
+- Equation (2.1) implies a much stronger notion of the utility provided by holding money 
+than simply that the household would prefer having more money to less money.
+
+## Constraint {.scrollable}
+
+- Assume that households can hold money, bonds that pay a nominal interest rate $i_t$ and physical capital. 
+- Physical capital produces output according to a standard neoclassical production function.
+- Given its current income, its assets, and any net transfers received from the government ( $\tau_t$), the household allocates its resources among consumption, gross investment in physical capital, and gross accumulation of real money balances and bonds. 
+
+## Constraint (cont'd)
+
+- If the rate of depreciation of physical capital is $\delta$, the aggregate economy wide budget  constraint of the household sector takes the form 2.2
+
+$$
+\begin{multline*}
+Y_t + \tau_t N_t+(1-\delta)K_{t-1}+ \frac {(1+i_{t-1}) B_{t-1}}{P_t}+ \frac {M_{t-1}}{P_t} \\
+= C_t+K_t+ \frac {M_t}{P_t} + \frac {B_t}{P_t} \tag{2.2}
+\end{multline*}
+$$
+
+where $Y_t$ is aggregate output, $K{t-1}$ is the aggregate stock of capital at the start of period t, and $\tau_t N_t$ is the aggregate real value of any lump-sum transfers or taxes. 
+
+
+## Aggregate production function
+
+- The aggregate production function relates output Y1 to the available capital stock $K_{t-1}$ and employment $N_1$: $Y_1 = F(K_{1-t},N_1)$
+- Assuming this production function is linear homogeneous with constant returns to scale, output per capita y1 is a function of the per capita capital stock $k_{t-1}$ 
+
+$$
+y_t=f ({\frac {k_{t-1}} {1+n}}), \tag{2.3}
+$$
+
+- where n is the population growth rate (assumed to be constant).
+- Note that output is produced in period t using capital carried over from period t - 1. 
+
+## The percapita version
+
+- Dividing both sides of the budget constraint (2.2) by population $N_t$, the per capita version becomes 2.4
+
+$$
+\omega_t \equiv f ({\frac {k_{t-1}} {1+n}}) + \tau_t + ({\frac {1 - \delta} {1+n}}) k_{t-1}+ {{(1 + i_{t-1})b_{t-1}+ m_{t-1}} \over {(1+\pi_t)}{(1+n)}} \tag{2.4}
+$$
+
+## Dynamic optimization
+
+- The state variable for the problem is the household's initial level of resources $\omega_1$, and the value function is defined by 2.5
+
+$$
+V_{(\omega_t)}= max \{u(c_t,m_t)+\beta V(\omega_{t+1})\},  \tag{2.5}
+$$
+
+![](2.5.png){width=600px}
+
+## Where the maximization
+
+- where the maximization is subject to the budget constraint (2.4) and
+
+
+$$
+\omega_{t+1} \equiv f ({\frac {k_{t}} {1+n}}) + \tau_{t+1} + ({\frac {1 - \delta} {1+n}}) k_{t}+ {{(1 + i_{t-1})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}} 
+$$
+
+
+## FOC
+
+- Using (2.4) to express $k_t$ as $\omega_t - c_t - m_t - b_t$ and making use of the definition of $\omega_{t+1}$, (2.5) can be written as 
+
+
+
+$$
+\begin{align*}
+& V_{(\omega_t)}= max \{u(c_t,m_t) \\
+& +\beta V(f \frac {({\omega_t - c_t - m_t - b_t}} {1+n}) + \tau_{t+1} + ({\frac {1 - \delta} {1+n}})({\omega_t - c_t - m_t - b_t) \\
+& + {{(1 + i_{t})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}}}  \} 
+\end{align*}
+$$
+
+## FOC
+
+The first order necessary conditions for this problem are
+
+$$
+u_c(c_t,m_t)- \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] V_{\omega}(\omega_{1+1})=0 \tag{2.6}
+$$
+$$
+\frac {1+i_t} {(1+\pi_{1+t}) (1+n)} - \frac {1}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta]=0 \tag{2.7}
+$$
+$$
+u_c(c_t,m_t)- \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta - \frac {1}{1+\pi_{t+1}}] V_{\omega}(\omega_{1+1})=0 \tag{2.8}
+$$
+
+together with the transversality conditions
+
+$$
+\lim_{t\to\infty} \beta^t \lambda_t x_t =0, for\ x = k,b,m \tag{2.9}
+$$
+
+where At is the marginal utility of period t consumption.
+
+## The envelope theorem
+
+- The envelope theorem implies 2.10
+
+
+$$
+
+V_\omega (\omega_t) = \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] - \frac {1}{1+\pi_{t+1}}] V_{\omega}(\omega_{1+1}), 
+
+$$
+which together with (2.6) yields
+
+$$
+\lambda_t \equiv u_c(c_t, m_t)= V_\omega (\omega_t) \tag{2.10}
+$$
+
+## The FOC have straightforward interpretations.
+
+- Using (2.6) and (2.10), (2.8) can be written as 
+
+
+$$
+u_m(c_t,m_t)+ \frac {{\beta u_c} (c_{t+1},m_{t+1})} {{(1+\pi_{t+1})(1+n)}} = u_c(c_t,m_t) \tag{2.11}
+$$
+## Straightforward interpretations (cont'd)
+
+From (2.6), (2.7), and (2.11), 
+
+
+$$
+\begin{align*}
+\frac {{u_m} (c_t.m_t)} {{u_c}(c_t.m_t)} & = 1- [ \frac {\beta}{{(1+r_t)(1+\pi_{t+1})} }] \frac {{u_c}(c_{t+1}, m_{t+1})} {{{u_c}(c_{t}, m_{t})}} \\
+& = 1- \frac {{1}} {{(1+r_t)} (1+\pi_{t+1})} \\
+& = \frac {{i_t}} {{(1+i_t)}} \equiv \Upsilon_t \tag{2.12}
+\end{align*}
+$$
+
+## The Fisher relationship
+
+$$
+1+i_t = [f_k(\frac {{k_t}} {{1+n}}) + 1 - \delta] (1+\pi_{t+1}) = (1+r_t)(1+\pi_{t+1}) \tag{2.13}
+$$
+
+- It expresses the gross nominal rate of interest as equal to the gross real return on capital times 1 plus the expected rate of inﬂation.
+
+- If one notes that $(1 + x)(1 + y) \approx  1 + x + y $ when x and y are small, so (2.13) is often written as 
+$$
+i_t= r_t+ \pi_{t+1}
+$$
+
+## 2.2.1 Steady-State Equilibrium
+
+![](21415.png){width=600px}
+
+# next
+
+![](21617.png){width=600px}
+
+## Next
+
+2.18
+
+![](218.png){width=600px}
+
+## Next
+
+![](21920.png){width=600px}
+
+## next
+
+![](221.png){width=600px}
+
+
+## To understand why superneutrality work
+
+![](222.png){width=600px}
+
+
+
+## Existence of Steady State
+
+![](223.png){width=600px}
+
+## next
+
+![](fig21.png){width=600px}
+## Steady States with a Time-Varying Money Stock 
+
+![](22425.png){width=600px}
+
+## next
+
+![](22627.png){width=600px}
+
+## Next
+
+![](228.png){width=600px}
+
+## next
+
+![](229.png){width=600px}
+
+## next
+
+![](230.png){width=600px}
+
+
+
+## 2.3 The Welfare Cost of Inflation 
+
+
+
+
+
+FIgure 2.3 Welfare costs of inflation as measured by area under money demand curve.
+
+## Lucas
+
+Lucas (2000) provided estimates of the welfare costs of inflation, starting with the fol­
+lowing specification of the instantaneous utility function: 
+2.35
+2.36
+2.37
+2.38
+2.39
+2.40
+
+
+
+```{=html}
+<!-- 
+# {background-iframe="grid-worms/index.html"} 
+Background for title slide, not working in this version of Quarto -->
+```
